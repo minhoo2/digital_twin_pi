@@ -5,11 +5,11 @@ gpio.setmode(gpio.BCM)
 
 class Led:
     
-    def _init_(self,pin, color):
+    def __init__(self,pin, color):
         self.pin = pin
         self.color = color
-        gpio.setup(pin, gpio.OUT)
-        gpio.output(pin, gpio.LOW)
+        gpio.setup(self.pin, gpio.OUT)
+        gpio.output(self.pin, gpio.LOW)
     
     def blink(self, count, time):
         for _ in range(count):
