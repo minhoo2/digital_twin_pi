@@ -51,7 +51,7 @@ greenLedState = False
 def ledGreenFunction():
     global greenLedState # 함수의 밖에 있는 것을 가져올 때는 global
     if greenLedState:
-        leds[1].ledoff()
+        leds[1].ledOff()
     else:
         leds[1].ledOn()
     greenLedState = not greenLedState
