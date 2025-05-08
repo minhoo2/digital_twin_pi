@@ -21,7 +21,7 @@ class Led:
     def ledOn(self):
         gpio.output(self.pin, gpio.HIGH)
     
-    def ledoff(self):
+    def ledOff(self):
         gpio.output(self.pin, gpio.LOW)
 
 class Button:
@@ -48,7 +48,6 @@ def ledRedFunction():
     leds[0].blink(10, 0.5)
 
 greenLedState = False
-
 def ledGreenFunction():
     global greenLedState # 함수의 밖에 있는 것을 가져올 때는 global
     if greenLedState:
